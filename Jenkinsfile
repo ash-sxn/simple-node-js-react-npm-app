@@ -1,6 +1,9 @@
 pipeline {
     agent {
-        label 'docker-ssh-jenkins-agent'
+        docker {
+            image 'node:lts-buster-slim'
+            args '-p 3000:3000'
+        }
     }
     stages {
         stage('Build') {
