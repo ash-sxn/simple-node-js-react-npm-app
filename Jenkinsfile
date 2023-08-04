@@ -21,7 +21,7 @@ pipeline {
                         echo "If you are using Gitpod use this link instead ${modifiedUrl}"
                     }
                 }
-                input message: 'Finished using the website? (Click "Proceed" to continue)' 
+                input id: 'PROCEED', message: 'Finished using the website? (Click "Proceed" to continue)' 
                 sh './jenkins/scripts/kill.sh'  
             }
         }
